@@ -7,7 +7,7 @@ function App() {
   async function getAdvice() {
     const obj = await fetch("https://api.adviceslip.com/advice");
     const data = await obj.json();
-    console.log(data);
+    // console.log(data);
     setAdvice(data.slip.advice);
   }
 
