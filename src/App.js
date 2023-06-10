@@ -10,7 +10,8 @@ function App() {
     const data = await obj.json();
     // console.log(data);
     setAdvice(data.slip.advice);
-    setCount(count + 1);
+    // using arrow function in setCount() takes first the current count and then update it to new count
+    setCount(count => count + 1);
   }
 
   return (
