@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Advice from "./Advice";
+import Message from "./Message";
 
 function App() {
   // Setting useState to grab the advice everytime we click button
@@ -27,9 +29,9 @@ function App() {
   return (
     <div>
       <h1>Click to get advice!!</h1>
-      <h2>{advice}</h2>
+      <Advice advice={advice} />
       <button onClick={getAdvice}>Get Advice</button>
-      <h3>Number of times you asked for an advice: {count}</h3>
+      <Message count={count} />
     </div>
   );
 }
